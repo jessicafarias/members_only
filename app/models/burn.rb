@@ -1,0 +1,2 @@
+class Burn < ApplicationRecord
+end
