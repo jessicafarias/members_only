@@ -20,6 +20,18 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
+
+    <nav class="navbar regina_color">
+      <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+        <%= image_tag 'burn_book_200.png' %>
+      <% end %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
