@@ -6,6 +6,7 @@ class BurnsController < ApplicationController
   # GET /burns.json
   def index
     @burns = Burn.all.order('created_at DESC')
+    # MAYBE NEEDS CHANGE?
     @burn = Burn.new
   end
 
