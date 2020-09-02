@@ -1,22 +1,28 @@
-<%= form_with(model: burn, local: true) do |form| %>
-  <% if burn.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(burn.errors.count, "error") %> prohibited this burn from being saved:</h2>
+<div class="w-100">
 
-      <ul>
-        <% burn.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <%= form_with(model: burn, local: true) do |form| %>
+    <% if burn.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(burn.errors.count, "error") %> prohibited this burn from being saved:</h2>
+        <ul>
+          <% burn.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="">
+        <%= form.label :burn, class: "" %>
+        <%= form.text_area :burn, class: "w-100 border border-primary rounded regina_color" %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="actions">
+        <%= form.button :submit, class: "btn btn-primary" %>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :burn %>
-    <%= form.text_area :burn %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

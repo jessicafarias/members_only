@@ -5,6 +5,7 @@ class BurnsController < ApplicationController
   # GET /burns.json
   def index
     @burns = Burn.all
+    @burn = Burn.new
   end
 
   # GET /burns/1

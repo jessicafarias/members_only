@@ -1,27 +1,23 @@
-<p id="notice"><%= notice %></p>
+<section class="container">
+  <div class="row">
+    <!-- TRENDING -->
+    <div class="col-4">
+      <h1>col1</h1>
+    </div>
 
-<h1>Burns</h1>
+    <!-- NEW BURN -->
+    <div class="col-4">
+      <div class="row w-100">
+        <%= render 'form', burn: @burn %>
+      </div>
+      <%= render 'feed', burn: @burns %>
+      
 
-<table>
-  <thead>
-    <tr>
-      <th>Burn</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    </div>
 
-  <tbody>
-    <% @burns.each do |burn| %>
-      <tr>
-        <td><%= burn.burn %></td>
-        <td><%= link_to 'Show', burn %></td>
-        <td><%= link_to 'Edit', edit_burn_path(burn) %></td>
-        <td><%= link_to 'Destroy', burn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Burn', new_burn_path %>
+    <!-- WHO TO FOLLOW -->
+    <div class="col-4">
+      <h1>col3</h1>
+    </div>
+  </div>
+</section>
