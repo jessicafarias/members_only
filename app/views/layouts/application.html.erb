@@ -31,10 +31,14 @@
       </div>
       <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <p><%= link_to  "New Burn", new_burn_path, method: :delete, class: "button is-info ml-3 mr-3" %></p>
-          <p><%= link_to  "Logout", root_path, method: :delete, class: "button is-info ml-3 mr-3" %></p>
-          <p><%= link_to  "Sign In", root_path, method: :delete, class: "button is-info ml-3 mr-3" %></p>
-          <p><%= link_to  "Sign Un", root_path, method: :delete, class: "button is-info ml-3 mr-3" %></p>
+          <p><%= link_to  "New Burn", root_path, class: "button is-info ml-3 mr-3" %></p>
+          <% if user_signed_in? %>
+          <p><%= link_to  current_user.name, edit_user_registration_path, class: "button is-info ml-3 mr-3" %></p>
+          <p><%= link_to  "Logout", destroy_user_session_path, method: :delete, class: "button is-info ml-3 mr-3" %></p>
+          <% else %>
+          <p><%= link_to  "Sign In", new_user_session_path, class: "button is-info ml-3 mr-3" %></p>
+          <p><%= link_to  "Sign Up", new_user_registration_path, class: "button is-info ml-3 mr-3" %></p>
+        <% end %>
         </div>
       </div>
     </nav>

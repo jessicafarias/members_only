@@ -5,7 +5,7 @@ class BurnsController < ApplicationController
   # GET /burns
   # GET /burns.json
   def index
-    @burns = Burn.all
+    @burns = Burn.all.order('created_at DESC')
     @burn = Burn.new
   end
 
@@ -16,7 +16,7 @@ class BurnsController < ApplicationController
 
   # GET /burns/new
   def new
-    @burn = Burn.new
+    @burn = current_user.burns.build
   end
 
   # GET /burns/1/edit
@@ -26,7 +26,7 @@ class BurnsController < ApplicationController
   # POST /burns
   # POST /burns.json
   def create
-    @burn = Burn.new(burn_params)
+    @burn = current_user.burns.build(burn_params)
 
     respond_to do |format|
       if @burn.save
