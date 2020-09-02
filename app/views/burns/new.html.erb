@@ -1,5 +1,16 @@
-<h1>New Burn</h1>
 
-<%= render 'form', burn: @burn %>
 
-<%= link_to 'Back', burns_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <h1>New Burn</h1>
+      <%= render 'form', burn: @burn %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 mx-auto mt-2">
+      <%= link_to 'Cancel', burns_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
