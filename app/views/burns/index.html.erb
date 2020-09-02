@@ -1,12 +1,16 @@
 <section class="container">
   <div class="row">
     <!-- TRENDING -->
-    <div class="col-lg-3 col-sm-12">
+    <div class="col-lg-4 col-sm-12">
+      <% if user_signed_in? %>
+      <%= render 'profile' %>
+      <% else %>  
       <%= render 'trends' %>
+      <% end %>
     </div>
 
     <!-- NEW BURN -->
-    <div class="col-lg-6 col-sm-12">
+    <div class="col-lg-5 col-sm-12">
       <%= render 'form', burn: @burn %>
       <%= render 'feed', burn: @burns %>
     </div>
