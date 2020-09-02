@@ -1,23 +1,19 @@
 <section class="container">
   <div class="row">
     <!-- TRENDING -->
-    <div class="col-4">
-      <h1>col1</h1>
+    <div class="col-lg-3 col-sm-12">
+      <%= render 'trends' %>
     </div>
 
     <!-- NEW BURN -->
-    <div class="col-4">
-      <div class="row w-100">
-        <%= render 'form', burn: @burn %>
-      </div>
+    <div class="col-lg-6 col-sm-12">
+      <%= render 'form', burn: @burn %>
       <%= render 'feed', burn: @burns %>
-      
-
     </div>
 
     <!-- WHO TO FOLLOW -->
-    <div class="col-4">
-      <h1>col3</h1>
+    <div class="col-lg-3 col-sm-12">
+      <%= render 'who_to_follow' %>
     </div>
   </div>
 </section>

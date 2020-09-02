@@ -1,5 +1,4 @@
 <div class="w-100">
-
   <%= form_with(model: burn, local: true) do |form| %>
     <% if burn.errors.any? %>
       <div id="error_explanation">
@@ -11,18 +10,14 @@
         </ul>
       </div>
     <% end %>
-
     <div class="row">
-      <div class="">
-        <%= form.label :burn, class: "" %>
-        <%= form.text_area :burn, class: "w-100 border border-primary rounded regina_color" %>
-      </div>
+      <%= form.label :burn, class: "w-100" %>
     </div>
-    
     <div class="row">
-      <div class="actions">
+        <%= form.text_area :burn, class: "w-100 border border-primary rounded regina_color" %>
+    </div>
+    <div class="row">
         <%= form.button :submit, class: "btn btn-primary" %>
-      </div>
     </div>
   <% end %>
 </div>

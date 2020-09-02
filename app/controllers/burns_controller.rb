@@ -29,7 +29,7 @@ class BurnsController < ApplicationController
 
     respond_to do |format|
       if @burn.save
-        format.html { redirect_to @burn, notice: 'Burn was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Burn was successfully created.' }
         format.json { render :show, status: :created, location: @burn }
       else
         format.html { render :new }
