@@ -1,6 +1,6 @@
 class BurnsController < ApplicationController
-  before_action :set_burn, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_burn, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   # GET /burns
   # GET /burns.json
@@ -12,8 +12,7 @@ class BurnsController < ApplicationController
 
   # GET /burns/1
   # GET /burns/1.json
-  def show
-  end
+  def show; end
 
   # GET /burns/new
   def new
@@ -21,8 +20,7 @@ class BurnsController < ApplicationController
   end
 
   # GET /burns/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /burns
   # POST /burns.json
@@ -65,13 +63,14 @@ class BurnsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_burn
-      @burn = Burn.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def burn_params
-      params.require(:burn).permit(:burn)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_burn
+    @burn = Burn.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def burn_params
+    params.require(:burn).permit(:burn)
+  end
 end

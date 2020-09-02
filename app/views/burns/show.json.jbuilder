@@ -1,1 +1,1 @@
-json.partial! "burns/burn", burn: @burn
+json.partial! 'burns/burn', burn: @burn

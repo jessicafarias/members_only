@@ -1,1 +1,1 @@
-json.array! @burns, partial: "burns/burn", as: :burn
+json.array! @burns, partial: 'burns/burn', as: :burn

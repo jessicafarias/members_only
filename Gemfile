@@ -28,42 +28,38 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-#Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
+# Provides a better error page for Rails and other Rack apps.
 gem 'better_errors', '~> 2.7', '>= 2.7.1'
 
-
-
-#The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 
-#Forms made easy!
+# Forms made easy!
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
-#A configurable and documented Rails view helper for adding gravatars into your Rails application.
+# A configurable and documented Rails view helper for adding gravatars into your Rails application.
 gem 'gravatar_image_tag', '~> 1.2'
 
-#Flexible authentication solution for Rails with Warden
+# Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.16', '>= 2.16.2'
-  #automatically reloads your browser when 'view' files are modified.
-  #gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
-
-
+  # automatically reloads your browser when 'view' files are modified.
+  # gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
@@ -75,4 +71,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
