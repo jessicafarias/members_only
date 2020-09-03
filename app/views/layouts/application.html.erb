@@ -10,16 +10,7 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="alert alert-primary">
-        <p class="notice"><%= notice %></p>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger">
-        <p class="alert"><%= alert %></p>
-      </div>
-    <% end %>
+    <%= display_propper_flash %>
 
 <nav class="navbar navbar-expand-lg navbar-light regina_color">      
     <div>
