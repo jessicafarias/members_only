@@ -3,21 +3,10 @@
     <% @burns.each do |burn| %>
       <div class="row regina_color mt-2">
           <div class="col-4">
-            <% if user_signed_in? %>
-              <%= gravatar_image_tag(current_user.email, size:64, alt: current_user.name) %>
-            <% end %>
+            <%= user_image_display %>
           </div>
         <div class="col-8">
-          <% if user_signed_in? %>
-            
-            <div class="row">
-              <span><%= burn.user.name %></span>
-            </div>
-            <div class="row">
-              <span><%= burn.user.username %> </span>
-            </div>
-          <% end %>
-
+          <%= user_data_display(burn)%>
           <div class="row">
             <%= burn.burn %>
           </div>
