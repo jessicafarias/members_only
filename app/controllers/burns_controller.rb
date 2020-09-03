@@ -6,20 +6,9 @@ class BurnsController < ApplicationController
   # GET /burns.json
   def index
     @burns = Burn.all.order('created_at DESC')
-    # MAYBE NEEDS CHANGE?
     @burn = Burn.new
   end
 
-  # GET /burns/1
-  # GET /burns/1.json
-  def show; end
-
-  # GET /burns/new
-  def new
-    @burn = current_user.burns.build
-  end
-
-  # GET /burns/1/edit
   def edit; end
 
   # POST /burns
