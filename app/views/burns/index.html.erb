@@ -2,11 +2,7 @@
   <div class="row">
     <!-- TRENDING -->
     <div class="col-lg-4 col-sm-12">
-      <% if user_signed_in? %>
-      <%= render 'profile' %>
-      <% else %>  
-      <%= render 'trends' %>
-      <% end %>
+      <%= render_trends %>
     </div>
 
     <!-- NEW BURN -->

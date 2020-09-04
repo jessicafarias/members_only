@@ -46,4 +46,12 @@ module BurnsHelper
         end
     end
   end
+
+  def render_trends
+    if user_signed_in?
+      render 'profile'
+    else
+      render 'trends'
+    end
+  end
 end
