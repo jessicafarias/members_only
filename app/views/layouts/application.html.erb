@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MembersOnly</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= display_propper_flash %>
+
+<nav class="navbar navbar-expand-lg navbar-light regina_color">      
+    <div>
+      <%= link_to image_tag('burn_book_200.png', alt: "Logo", class: "w-80"), root_path %>
+    </div>
+    
+      <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        
+      <span class="navbar-toggler-icon"></span>
+      </div>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <p><%= link_to  "New Burn", root_path, class: "button is-info ml-3 mr-3" %></p>
+          <%= login_helper %>
+        </div>
+      </div>
+    </nav>
+      
+    <%= yield %>
+  </body>
+</html>

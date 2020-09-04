@@ -1,0 +1,32 @@
+<section class="profile">
+  <div class="row">
+  <h3>Profile</h3>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <%= gravatar_image_tag('spam@spam.com'.gsub('spam', 'mdeering'), :alt => 'Michael Deering', :gravatar => { :filetype => :gif } )%>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <%= current_user.name%>
+      </div>
+      <div class="row">
+        <%= current_user.username%>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="row">BURNS</div>
+      <div class="row"> <%= current_user.burns.count %> </div>
+    </div>
+    <div class="col-4">
+      <div class="row">FOLLOWERS</div>
+      <div class="row"> 3583 Plastics </div>
+    </div>
+    <div class="col-4">
+      <div class="row">FOLLOWING</div>
+      <div class="row"> 3 Plastics </div>
+    </div>
+  </div>
+</section>
