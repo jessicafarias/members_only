@@ -11,24 +11,9 @@
             <%= burn.burn %>
           </div>
 
-          <% if user_signed_in? && current_user.id == burn.user.id %>
-            <div class="row">
-              <%= link_to burn, class: "level-item mr-2" do %>
-                <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-              <% end %>
-
-              <%= link_to edit_burn_path(burn), class: "level-item mr-2" do %>
-                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-              <% end %>
-              <%= link_to burn, method: :delete, data: { confirm: "Are you sure you want to delete this burn?" } do %>
-                  <span class="icon mr-2"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-              <% end %>
-            </div>
-          <% end %>
+          <%= user_link_display(burn) %>
           
         </div>
       </div>
       <section>
     <% end %>
-
-<%#= link_to 'New Burn', new_burn_path %>
